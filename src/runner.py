@@ -4,6 +4,7 @@ import sys
 import pygame
 
 from controller import Controller
+from mixer import Mixer
 
 
 def main():
@@ -25,10 +26,10 @@ def main():
 
     # Create runners
     # canvas = Canvas(base_dir, screen, screen_width, screen_height, screen_scale)
-    # mixer = Mixer(base_dir)
+    mixer = Mixer(base_dir)
 
     # Create controller
-    controller = Controller(screen, screen_width, screen_height, screen_scale)
+    controller = Controller(screen, screen_width, screen_height, screen_scale, mixer)
 
     # Set FPS
     fps = 60
